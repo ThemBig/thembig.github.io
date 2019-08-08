@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CV</title>
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <style media="screen">
+      body {
+        background-color: rgb(90, 132, 189);
+        font-size: 3vh;
+      }
+
+      a {
+        cursor: pointer;
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+
+      .header {
+        text-align: center;
+      }
+
+      .title {
+        font-size: 5vh;
+      }
+
+      .img {
+        text-align: center;
+      }
+
+      .img img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+
+      .name {
+          font-size: 4vh;
+      }
+
+      .menu {
+        display: flex;
+        flex-dirction: row;
+        justify-content: center;
+      }
+
+      .menu ul {
+        display: inline;
+        padding: 0px;
+        margin-top: 3px;
+        margin-bottom: 10px;
+      }
+
+      .menu ul li {
+        display: inline;
+        margin: 0px 5px 0px 5px;;
+      }
+
+      .content {
+        overflow: auto;
+        height: 280px;
+      }
+
+      #contact {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      #contact ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      #contact img {
+        width: 40px;
+        height: 40px;
+
+      }
+
+      #education {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-items: flex-start;
+      }
+
+      #education .formal {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+          margin-right: 10px;
+      }
+
+      #education .nonFormal {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 10px;
+      }
+      .footer {
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <div class="title">
+          CURRICULUM VITAE
+        </div>
+        <div class="img">
+          <img src="./assets/img/foto.jpg" alt="Foto Profile">
+        </div>
+        <div class="name">
+          MALIK FAJAR
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a class="about">About</a></li>
+            <li><a class="contact">Contact</a></li>
+            <li><a class="education">Education</a></li>
+            <li><a class="hobby">Hobby</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+        <div id="about">
+          Hello, my name Malik Fajar
+        </div>
+        <div id="contact">
+          Call me in :
+          <ul>
+            <li title="facebook"><img src="./assets/img/facebook-logo.png" alt="facebook"></li>
+            <li title="GitHub"><img src="./assets/img/" alt="github"></li>
+            <li title="Instagram"><img src="./assets/img/insta.png" alt="instagram"></li>
+            <li title="Twitter"><img src="./assets/img/twitter.png" alt="twitter"></li>
+            <li title="WhatsApp"><img src="./assets/img/whatsapp-logo.png" alt="whatsapp"></li>
+          </ul>
+        </div>
+        <div id="education">
+          <div class="formal">
+            Formal Education
+            <ol>
+              <li>SD N 2 Temuwangi</li>
+              <li>SMP N 2 Pedan</li>
+              <li>SMK N 2 Klaten</li>
+            </ol>
+          </div>
+          <div class="nonFormal">
+            Non Formal Education
+            <ol>
+              <li><a href="freecodecamp.org/malikfajar">FreeCodeCamp</a></li>
+            </ol>
+          </div>
+        </div>
+        <div id="hobby">
+          <ul>
+            <li>Reading</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">
+        &copy; Malik Fajar 2019
+      </div>
+
+    </div>
+  </body>
+</html>
