@@ -6,6 +6,9 @@
     <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <style media="screen">
       body {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        overflow: hidden;
         background-color: rgb(90, 132, 189);
         font-size: 3vh;
       }
@@ -18,6 +21,7 @@
         width: 100%;
         height: 100%;
         text-align: center;
+        overflow: hidden;
       }
 
       .header {
@@ -61,8 +65,9 @@
       }
 
       .content {
+        padding-top: 5px;
         overflow: auto;
-        height: 280px;
+        height: 45vh;
       }
 
       #contact {
@@ -70,7 +75,10 @@
         justify-content: center;
         align-items: flex-start;
       }
+      #contact ul {
+        width: 100px;
 
+      }
       #contact ul li {
         display: flex;
         flex-direction: row;
@@ -95,7 +103,14 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-          margin-right: 10px;
+        margin-right: 10px;
+      }
+
+      #education .formal ol {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
       }
 
       #education .nonFormal {
@@ -104,6 +119,7 @@
         align-items: flex-start;
         margin-left: 10px;
       }
+
       .footer {
         text-align: center;
       }
@@ -144,42 +160,16 @@
         <div id="about">
           Hello, my name Malik Fajar
         </div>
-        <div id="contact">
-          Call me in :
-          <ul>
-            <li title="facebook"><img src="./assets/img/facebook-logo.png" alt="facebook">&nbsp;&nbsp;<span class="hide">Facebook</span></li>
-            <li title="GitHub"><img src="./assets/img/github.png" alt="github">&nbsp;&nbsp;<span class="hide">GitHub</span></li>
-            <li title="Instagram"><img src="./assets/img/insta.png" alt="instagram">&nbsp;&nbsp;<span class="hide">Instagram</span></li>
-            <li title="Twitter"><img src="./assets/img/twitter.png" alt="twitter">&nbsp;&nbsp;<span class="hide">Twitter</span></li>
-            <li title="WhatsApp"><img src="./assets/img/whatsapp-logo.png" alt="whatsapp">&nbsp;&nbsp;<span class="hide">WhatsApp</span></li>
-          </ul>
-        </div>
-        <div id="education">
-          <div class="formal">
-            Formal Education
-            <ol>
-              <li>SD N 2 Temuwangi</li>
-              <li>SMP N 2 Pedan</li>
-              <li>SMK N 2 Klaten</li>
-            </ol>
-          </div>
-          <div class="nonFormal">
-            Non Formal Education
-            <ol>
-              <li><a href="https://www.freecodecamp.org/malikfajar" target="_blank">FreeCodeCamp</a></li>
-            </ol>
-          </div>
-        </div>
-        <div id="hobby">
-          <ul>
-            <li>Reading</li>
-          </ul>
-        </div>
+
       </div>
       <div class="footer">
         &copy; Malik Fajar 2019
       </div>
 
     </div>
+    <script src="./assets/js/jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script src="./assets/js/script.js" charset="utf-8"></script>
+
+    </script>
   </body>
 </html>
