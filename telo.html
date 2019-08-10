@@ -196,6 +196,46 @@
       </div>
 
     </div>
+    <script type="text/javascript">
+        function fadeOut(element) {
+          console.log(element[0]);
+            if (element[0] == '.') {
+              var getEl = document.getElementsByClassName(element.slice(1, element.length))[0];
+            }else if (element[0] == '#') {
+              var getEl = document.getElementById(element.slice(1, element.length))[0];
+            }
+
+            var op = 1;  // initial opacity
+            console.log(getEl);
+            // getEl.innerHTML = "Malik Tok"
+            var timer = setInterval(function () {
+                if (op <= 0.1){
+                    clearInterval(timer);
+                    getEl.style.display = 'none';
+                    getEl.innerHTML = 'hai';
+                }
+                getEl.style.opacity = op;
+                getEl.style.filter = 'alpha(opacity=' + op * 100 + ")";
+                op -= op * 0.1;
+            }, 50);
+          }
+         const footer = document.getElementsByClassName("footer")[0];
+
+      // var check = 1;
+      footer.addEventListener("click", function() {
+        fadeOut('.footer');
+      //   footer.style.opacity -= 0.1;
+      //   if (check == 1) {
+      //     footer.innerHTML = 'UjiCoba javascript';
+      //     check = 0;
+      //   }else {
+      //     footer.innerHTML = '&copy; Malik Fajar 2019';
+      //     check = 1;
+      //   }
+      //   footer.style.opacity += 0.1;
+      //
+      })
+    </script>
     <script src="./assets/js/jquery-3.4.1.min.js" charset="utf-8"></script>
     <script src="./assets/js/script.js" charset="utf-8"></script>
 
