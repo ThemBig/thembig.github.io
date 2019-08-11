@@ -1,18 +1,18 @@
 let about, contact, education, hobby, contactItem;
-  about = `<div id="about">
-            Hello, my name Malik Fajar
+about = `<div id="about">
+            Hello, my name Malik Fajar ${age}
            </div>`;
-  contact = `<div id="contact">
-                Call me in :
+contact = `<div id="contact">
+                Find me in :
                 <ul>
-                  <li title="facebook"><a href="https://facebook.com/_thembig" target="_blank"><img src="./assets/img/facebook-logo.png" alt="facebook">&nbsp;&nbsp;<span class="hide">Facebook</span></a></li>
-                  <li title="GitHub"><a href="https://github.com/thembig" target="_blank"><img src="./assets/img/github.png" alt="github">&nbsp;&nbsp;<span class="hide">GitHub</span></a></li>
-                  <li title="Instagram"><a href="https://instagram.com/_thembig" target="_blank"><img src="./assets/img/insta.png" alt="instagram">&nbsp;&nbsp;<span class="hide">Instagram</span></a></li>
-                  <li title="Twitter"><a href="https://twitter.com/_thembig" target="_blank"><img src="./assets/img/twitter.png" alt="twitter">&nbsp;&nbsp;<span class="hide">Twitter</span></a></li>
-                  <li title="WhatsApp"><a href="tel:+6285878776936"><img src="./assets/img/whatsapp-logo.png" alt="whatsapp">&nbsp;&nbsp;<span class="hide">WhatsApp</span></a></li>
+                  <li><a href="https://facebook.com/_thembig" target="_blank"><img src="./assets/img/facebook-logo.png" alt="facebook">&nbsp;&nbsp;<span class="hide">Facebook</span></a></li>
+                  <li><a href="https://github.com/thembig" target="_blank"><img src="./assets/img/github.png" alt="github">&nbsp;&nbsp;<span class="hide">GitHub</span></a></li>
+                  <li><a href="https://instagram.com/_thembig" target="_blank"><img src="./assets/img/insta.png" alt="instagram">&nbsp;&nbsp;<span class="hide">Instagram</span></a></li>
+                  <li><a href="https://twitter.com/_thembig" target="_blank"><img src="./assets/img/twitter.png" alt="twitter">&nbsp;&nbsp;<span class="hide">Twitter</span></a></li>
+                  <li><a href="tel:+6285878776936"><img src="./assets/img/whatsapp-logo.png" alt="whatsapp">&nbsp;&nbsp;<span class="hide">WhatsApp</span></a></li>
                 </ul>
               </div>`;
-  education = `<div id="education">
+education = `<div id="education">
                 <div class="formal">
                   Formal Education
                   <ol>
@@ -28,100 +28,94 @@ let about, contact, education, hobby, contactItem;
                   </ol>
                 </div>
               </div>`;
-  hobby = `<div id="hobby">
+hobby = `<div id="hobby">
             <ul>
               <li>Reading</li>
             </ul>
           </div>`;
 
-  contactItem = function() { //contact items
-    $('li[title="facebook"]').mouseenter(function() {
-      $('li[title="facebook"] span').removeClass('hide');
-      $('li[title="facebook"] span').addClass('show');
-    });
-
-    $('li[title="facebook"]').mouseleave(function() {
-      $('li[title="facebook"] span').removeClass('show');
-      $('li[title="facebook"] span').addClass('hide');
-    });
-
-    $('li[title="GitHub"]').mouseenter(function() {
-      $('li[title="GitHub"] span').removeClass('hide');
-      $('li[title="GitHub"] span').addClass('show');
-    })
-
-    $('li[title="GitHub"]').mouseleave(function() {
-      $('li[title="GitHub"] span').removeClass('show');
-      $('li[title="GitHub"] span').addClass('hide');
-    })
-
-    $('li[title="Instagram"]').mouseenter(function() {
-      $('li[title="Instagram"] span').removeClass('hide');
-      $('li[title="Instagram"] span').addClass('show');
-    })
-
-    $('li[title="Instagram"]').mouseleave(function() {
-      $('li[title="Instagram"] span').removeClass('show');
-      $('li[title="Instagram"] span').addClass('hide');
-    })
-
-    $('li[title="Twitter"]').mouseenter(function() {
-      $('li[title="Twitter"] span').removeClass('hide');
-      $('li[title="Twitter"] span').addClass('show');
-    })
-
-    $('li[title="Twitter"]').mouseleave(function() {
-      $('li[title="Twitter"] span').removeClass('show');
-      $('li[title="Twitter"] span').addClass('hide');
-    })
-
-    $('li[title="WhatsApp"]').mouseenter(function() {
-      $('li[title="WhatsApp"] span').removeClass('hide');
-      $('li[title="WhatsApp"] span').addClass('show');
-    })
-
-    $('li[title="WhatsApp"]').mouseleave(function() {
-      $('li[title="WhatsApp"] span').removeClass('show');
-      $('li[title="WhatsApp"] span').addClass('hide');
-    })
+function getElement(element) {
+  if (element[0] == '.') {
+    var getEl = document.getElementsByClassName(element.slice(1, element.length))[0];
+  } else if (element[0] == '#') {
+    var getEl = document.getElementById(element.slice(1, element.length))[0];
+  }else {
+    var getEl = document.getElementsByTagName(element);
   }
+  return getEl;
+}
 
-  fade = (content) => {
-    $('.content').fadeOut(function() {
-      $('.content').html(content);
-      $('.content').fadeIn();
-    });
-  };
+//NAV
+const menu          = getElement('li');
+const content       = getElement('.content');
+const navAbout      = getElement('.about');
+const navContact    = getElement('.contact');
+const navEducation  = getElement('.education');
+const navHobby      = getElement('.hobby');
 
-$(function() {
+navAbout.addEventListener('click', function() {
+  content.innerHTML = about;
+  getElement('.active').classList.remove('active');
+  navAbout.classList.add('active');
+})
 
+navContact.addEventListener('click', function() {
+  content.innerHTML = contact;
+  getElement('.active').classList.remove('active');
+  navContact.classList.add('active');
+  contactItem();
+})
 
-  $('.about').click(function() {
-    $('.active').removeClass('active');
-    $('.about').addClass('active');
-    fade(about);
+navEducation.addEventListener('click', function() {
+  content.innerHTML = education;
+  getElement('.active').classList.remove('active');
+  navEducation.classList.add('active');
+})
+
+navHobby.addEventListener('click', function() {
+  content.innerHTML = hobby;
+  getElement('.active').classList.remove('active');
+  navHobby.classList.add('active');
+})
+
+contactItem = function() {
+  const list      = getElement('li');
+  const sosmed    = getElement('span');
+  const facebook  = list[4];
+  const github    = list[5];
+  const instagram = list[6];
+  const twitter   = list[7];
+  const whatsApp  = list[8];
+
+  facebook.addEventListener('mouseover', function() {
+    sosmed[0].classList.add('show');
+  })
+  facebook.addEventListener('mouseout', function() {
+    sosmed[0].classList.remove('show');
+  })
+  github.addEventListener('mouseover', function() {
+    sosmed[1].classList.add('show');
+  })
+  github.addEventListener('mouseout', function() {
+    sosmed[1].classList.remove('show');
+  })
+  instagram.addEventListener('mouseover', function() {
+    sosmed[2].classList.add('show');
+  })
+  instagram.addEventListener('mouseout', function() {
+    sosmed[2].classList.remove('show');
+  })
+  twitter.addEventListener('mouseover', function() {
+    sosmed[3].classList.add('show');
+  })
+  twitter.addEventListener('mouseout', function() {
+    sosmed[3].classList.remove('show');
+  })
+  whatsApp.addEventListener('mouseover', function() {
+    sosmed[4].classList.add('show');
+  })
+  whatsApp.addEventListener('mouseout', function() {
+    sosmed[4].classList.remove('show');
   })
 
-  $('.contact').click(function() {
-    $('.active').removeClass('active');
-    $('.contact').addClass('active');
-    $('.content').fadeOut(function() {
-      $('.content').html(contact);
-      $('.content').fadeIn(function() {
-        contactItem();
-      });
-    });
-  });
-
-  $('.education').click(function() {
-    $('.active').removeClass('active');
-    $('.education').addClass('active');
-    fade(education);
-  });
-
-  $('.hobby').click(function() {
-    $('.active').removeClass('active');
-    $('.hobby').addClass('active');
-    fade(hobby);
-  });
-})
+}
