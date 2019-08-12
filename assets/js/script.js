@@ -7,7 +7,7 @@ contact = `<div id="contact">
                 <ul>
                   <li><a href="https://facebook.com/_thembig" target="_blank"><img src="./assets/img/facebook-logo.png" alt="facebook">&nbsp;&nbsp;<span class="hide">Facebook</span></a></li>
                   <li><a href="https://github.com/thembig" target="_blank"><img src="./assets/img/github.png" alt="github">&nbsp;&nbsp;<span class="hide">GitHub</span></a></li>
-                  <li><a href="https://instagram.com/_thembig" target="_blank"><img src="./assets/img/insta.png" alt="instagram">&nbsp;&nbsp;<span class="hide">Instagram</span></a></li>
+                  <li><a href="https://instagram.com/malilfajar17" target="_blank"><img src="./assets/img/insta.png" alt="instagram">&nbsp;&nbsp;<span class="hide">Instagram</span></a></li>
                   <li><a href="https://twitter.com/_thembig" target="_blank"><img src="./assets/img/twitter.png" alt="twitter">&nbsp;&nbsp;<span class="hide">Twitter</span></a></li>
                   <li><a href="tel:+6285878776936"><img src="./assets/img/whatsapp-logo.png" alt="whatsapp">&nbsp;&nbsp;<span class="hide">WhatsApp</span></a></li>
                 </ul>
