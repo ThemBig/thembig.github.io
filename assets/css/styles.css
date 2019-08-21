@@ -1,3 +1,11 @@
+@font-face {
+    font-family: Arvo;
+    src: url(../fonts/Arvo/Arvo-Regular.ttf);
+}
+
+* {
+  font-family: Arvo, serif;
+}
 body {
   padding-top: 0px;
   padding-bottom: 0px;
