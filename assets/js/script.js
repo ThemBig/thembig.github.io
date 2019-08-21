@@ -1,6 +1,6 @@
-let about, contact, education, hobby, contactItem;
+let about, contact, education, hobby, skill, contactItem;
 about = `<div id="about">
-            Hello, my name Malik Fajar ${age}
+            Hello friends, my name is Malik Fajar. <span id="age">${age}</span>, you can find me <a class="contact" style="color: #eb2f23;">here</a>
            </div>`;
 contact = `<div id="contact">
                 Find me in :
@@ -33,7 +33,10 @@ hobby = `<div id="hobby">
               <li>Reading</li>
             </ul>
           </div>`;
-
+skill = `<div id="skill">
+            My Skill is : 1. madang
+                          2. Turu
+          </div>`;
 function getElement(element) {
   if (element[0] == '.') {
     var getEl = document.getElementsByClassName(element.slice(1, element.length))[0];
@@ -52,11 +55,23 @@ const navAbout      = getElement('.about');
 const navContact    = getElement('.contact');
 const navEducation  = getElement('.education');
 const navHobby      = getElement('.hobby');
+const navSkill      = getElement('.skill');
+const contactView   = function() {
+  document.getElementsByClassName('contact')[1]
+    .addEventListener('click', function() {
+    content.innerHTML = contact;
+    getElement('.active').classList.remove('active');
+    navContact.classList.add('active');
+    contactItem();
+  })
+}
 
+contactView()
 navAbout.addEventListener('click', function() {
   content.innerHTML = about;
   getElement('.active').classList.remove('active');
   navAbout.classList.add('active');
+  contactView()
 })
 
 navContact.addEventListener('click', function() {
@@ -78,14 +93,21 @@ navHobby.addEventListener('click', function() {
   navHobby.classList.add('active');
 })
 
+navSkill.addEventListener('click', function() {
+  content.innerHTML = skill;
+  getElement('.active').classList.remove('active');
+  navSkill.classList.add('active');
+})
+
 contactItem = function() {
-  const list      = getElement('li');
+  // const list      = getElement('li');
+  const list      = document.getElementById('contact').getElementsByTagName('li');
   const sosmed    = getElement('span');
-  const facebook  = list[4];
-  const github    = list[5];
-  const instagram = list[6];
-  const twitter   = list[7];
-  const whatsApp  = list[8];
+  const facebook  = list[0];
+  const github    = list[1];
+  const instagram = list[2];
+  const twitter   = list[3];
+  const whatsApp  = list[4];
 
   facebook.addEventListener('mouseover', function() {
     sosmed[0].classList.add('show');

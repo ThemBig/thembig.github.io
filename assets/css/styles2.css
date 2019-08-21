@@ -1,0 +1,53 @@
+font-face {
+    font-family: Arvo;
+    src: url(../fonts/Arvo/Arvo-Regular.ttf);
+}
+
+* {
+  font-family: Arvo, serif;
+}
+html, body {
+  margin: 0px;
+  padding: 0px;
+  /* background-color: rgb(90, 132, 189); */
+  font-size: 3vh;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.left {
+  text-align: center;
+  width: 30%;
+  height: 100%;
+  position: fixed;
+  background-color: rgb(90, 132, 189);
+  float:left;
+  padding-top: 5px;
+
+}
+
+.right {
+  width: 70%;
+  float: right;
+  padding-top: 5px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #030526;
+}
+
+.navbar a {
+  margin-right: 5px;
+}

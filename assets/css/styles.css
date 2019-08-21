@@ -220,3 +220,10 @@ a {
     height: 30px;
   }
 }
+
+@media screen and (min-width: 1312px) {
+  .content {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
