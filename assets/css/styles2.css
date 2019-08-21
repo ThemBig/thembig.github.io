@@ -54,3 +54,35 @@ a {
 .navbar a {
   margin-right: 5px;
 }
+
+.headerContent {
+  
+}
+
+.content {
+  overflow-y: scroll;
+}
+
+#about {
+
+}
+
+#contact {
+
+}
+
+#education {
+
+}
+
+#hobby {
+
+}
+
+#skill {
+
+}
+
+.footer {
+  text-align: center;
+}
