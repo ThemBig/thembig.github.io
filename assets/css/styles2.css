@@ -40,12 +40,15 @@ a {
 .right {
   width: 70%;
   float: right;
-  padding-top: 5px;
 }
 
 .navbar {
+  margin-top: 0px;
   overflow: hidden;
-  background-color: #030526;
+  background-color: #030526 !important;
+  text-align: right;
+  color: #ffffff;
+  padding-top: 5px;
 }
 
 .navbar a {
