@@ -39,57 +39,58 @@ a {
   height: 100%;
   position: fixed !important;
   background-color: rgb(90, 132, 189);
-  /* float:left; */
-  padding-top: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 16px;
 }
 
-.left .img {
+.left .leftContent {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+}
+
+.left .leftContent .img {
   display: flex;
   justify-content: center;
   width: 35vh;
   height: 35vh;
 }
 
-.left .img img {
+.left .leftContent .img img {
   width: 35vh;
   height: 35vh;
   border-radius: 50%;
 }
 
-.left .name {
+.left .leftContent .name {
   font-size: 3vh;
   margin-top: 2vh;
   margin-bottom: 2vh;
 }
 
-.left .interes {
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-}
-
-.left .interes p {
-  text-indent: 2vh;
-  text-align: justify;
-}
-
-.left .quote {
+.left .leftContent .quote {
   font-style: italic;
   margin-top: 2vh;
   margin-bottom: 2vh;
 }
 
-.left .sosmed {
+.left .leftContent .sosmed {
   text-align: center;
 }
 
-.left .sosmed .contact {
+.left .leftContent .sosmed .contact {
   margin-top: 1vh;
+  display: flex;
+  flex-direction:  row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.left .sosmed .contact img {
+.left .leftContent .sosmed .contact img {
   width: 6vh;
 }
 
@@ -145,9 +146,19 @@ a {
   padding-top: 50px;
 }
 
+#education .class {
+  display: flex;
+  flex-direction: row;
+}
+
 #hobby {
   padding-top: 50px;
 }
+
+#interest {
+  padding-top: 50px;
+}
+
 
 #skill {
   padding-top: 50px;
@@ -165,6 +176,7 @@ a {
   bottom: 0;
   background-color: white;
 }
+
 
 @media screen and (max-width: 655px;) {
   .bottom .img {
@@ -196,6 +208,18 @@ a {
     align-items: center;
     justify-content: center;
     overflow-x: scroll;
+    height: 7vh;
+    padding-top: 0px;
+  }
+
+  .bottom .navbar a {
+    margin-right: 2.5vh;
+    margin-left: 2.5vh;
+  }
+
+  #education .class {
+    display: flex;
+    flex-direction: column;
   }
 
   .footer {
