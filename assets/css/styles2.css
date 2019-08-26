@@ -253,7 +253,7 @@ a {
     flex-direction: row;
     align-items: center;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
     /* height: 7vh; */
     /* padding-top: 6px; */
     /* overflow-x: scroll; */
@@ -262,9 +262,7 @@ a {
   }
 
   .bottom .navbar a {
-    margin-right: 2.5vh;
-    margin-left: 2.5vh;
-
+    margin: 0px;
   }
 
   .bottom .content {
@@ -287,7 +285,17 @@ a {
 
 @media screen and (max-width: 400px) {
   .bottom .navbar a {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+
+  .bottom .navbar a:first-of-type {
     margin-left: 5px;
+    margin-right: 2.5px;
+  }
+
+  .bottom .navbar a:last-of-type {
+    margin-left: 2.5px;
     margin-right: 5px;
   }
 }
