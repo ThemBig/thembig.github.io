@@ -3,11 +3,17 @@
   src: url('../fonts/Arvo/Arvo-Regular.ttf');
 }
 
+@font-face {
+  font-family: Montserrat;
+  src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
 * {
-  font-family: Arvo, serif;
+  font-family: Montserrat, Arvo, serif;
 }
 
 p {
+  font-family: Montserrat, Arvo, serif;
   text-indent: 3vh;
   text-align: justify;
 }
@@ -24,12 +30,6 @@ html, body {
 
 a {
   cursor: pointer;
-}
-
-.sticky {
-  position: fixed !important;
-  top: 0;
-  width: 100%;
 }
 
 .container {
@@ -125,6 +125,8 @@ a {
   right: 0;
   height: 5%;
   width: 100%;
+  position: fixed !important;
+  top: 0;
   ;
 }
 
@@ -132,6 +134,7 @@ a {
   margin-right: 5vh;
   text-decoration: none;
   color: white;
+  font-family: Arvo, serif;
 }
 
 .navbar a:hover {
@@ -141,9 +144,10 @@ a {
 
 .title {
   font-size: 4vh;
+  font-family: Montserrat, Arvo, serif;
 }
 
-.content {
+.right .content {
   height: 100%;
   bottom: 0;
   padding-left: 5vh;
@@ -162,6 +166,7 @@ a {
 #education .class {
   display: flex;
   flex-direction: row;
+  font-family: Montserrat, Arvo, serif;
 }
 
 #hobby {
@@ -216,7 +221,7 @@ a {
 }
 
 @media screen and (max-width: 500px) {
-  .sticky {
+  .navbar {
     position: fixed !important;
     top: 0;
     width: 100%;
@@ -238,6 +243,7 @@ a {
     width: 100%;
     background-color: #ffffff;
     position: relative;
+    padding-top: 55px;
   }
 
   .bottom {
@@ -265,6 +271,10 @@ a {
   #education .class {
     display: flex;
     flex-direction: column;
+  }
+
+  #about {
+    padding-top: 12px;
   }
 
   .footer {
