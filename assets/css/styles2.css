@@ -77,6 +77,11 @@ a {
   border: white solid 4px;
 }
 
+.left .leftContent .img img:hover {
+  transform: scale(1.5);
+  z-index: 999;
+}
+
 .left .leftContent .name {
   font-size: 3vh;
   margin-top: 2vh;
@@ -258,7 +263,7 @@ a {
     /* padding-top: 6px; */
     /* overflow-x: scroll; */
     position: fixed !important;
-
+    overflow-x: auto;
   }
 
   .bottom .navbar a {
@@ -282,5 +287,12 @@ a {
 
   .footer {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .bottom .navbar a {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
