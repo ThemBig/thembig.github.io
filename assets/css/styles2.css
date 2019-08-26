@@ -77,11 +77,6 @@ a {
   border: white solid 4px;
 }
 
-.left .leftContent .img img:hover {
-  transform: scale(1.5);
-  z-index: 999;
-}
-
 .left .leftContent .name {
   font-size: 3vh;
   margin-top: 2vh;
