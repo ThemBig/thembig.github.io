@@ -221,9 +221,6 @@ a {
 }
 
 @media screen and (max-width: 500px) {
-  .navbar {
-  }
-
   .container {
     display: flex;
     flex-direction: column;
@@ -266,8 +263,13 @@ a {
   .bottom .navbar a {
     margin-right: 2.5vh;
     margin-left: 2.5vh;
+
   }
 
+  .bottom .content {
+    padding-left: 3vh;
+    padding-right: 2vh;
+  }
   #education .class {
     display: flex;
     flex-direction: column;
