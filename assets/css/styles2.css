@@ -242,6 +242,7 @@ a {
 
   .top .leftContent {
     padding: 0px;
+    padding-bottom: 5px;
   }
   .bottom {
     width: 100%;
