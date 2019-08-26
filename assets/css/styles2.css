@@ -222,9 +222,6 @@ a {
 
 @media screen and (max-width: 500px) {
   .navbar {
-    position: fixed !important;
-    top: 0;
-    width: 100%;
   }
 
   .container {
@@ -246,6 +243,9 @@ a {
     padding-top: 55px;
   }
 
+  .top .leftContent {
+    padding: 0px;
+  }
   .bottom {
     width: 100%;
   }
@@ -259,8 +259,9 @@ a {
     justify-content: center;
     height: 7vh;
     padding-top: 6px;
-    overflow-x: scroll;
-    position: relative;
+    /* overflow-x: scroll; */
+    position: fixed !important;
+
   }
 
   .bottom .navbar a {
