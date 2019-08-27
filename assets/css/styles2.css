@@ -167,6 +167,11 @@ a {
   display: flex;
   flex-direction: row;
   font-family: Montserrat, Arvo, serif;
+  /* justify-content: space-between; */
+}
+
+#education .class ul {
+  width: auto;
 }
 
 #hobby {
