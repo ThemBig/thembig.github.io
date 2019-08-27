@@ -263,6 +263,8 @@ a {
 
   .bottom .navbar a {
     margin: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   .bottom .content {
@@ -280,22 +282,5 @@ a {
 
   .footer {
     width: 100%;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .bottom .navbar a {
-    margin-left: 2.5px;
-    margin-right: 2.5px;
-  }
-
-  .bottom .navbar a:first-of-type {
-    margin-left: 5px;
-    margin-right: 2.5px;
-  }
-
-  .bottom .navbar a:last-of-type {
-    margin-left: 2.5px;
-    margin-right: 5px;
   }
 }
