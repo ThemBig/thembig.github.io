@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CV</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/styles_.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <div class="title">
+          My Profile
+        </div>
+        <div class="img">
+          <img src="../assets/img/foto.jpg" alt="Foto Profile">
+        </div>
+        <div class="name">
+          MALIK FAJAR
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a class="about active">About</a></li>
+            <li><a class="contact">Contact</a></li>
+            <li><a class="education">Education</a></li>
+            <li><a class="hobby">Hobby</a></li>
+            <li><a class="skill">Skill</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+        <div id="about">
+        Hello friends, my name is Malik Fajar. <span id="age">x</span>, you can find me <a class="contact" style="color: #eb2f23;">here</a>
+
+        </div>
+
+      </div>
+      <div class="footer">
+        &copy; Malik Fajar 2019
+      </div>
+
+    </div>
+    <script type="text/javascript">
+      let myBorn = 2002;
+      let age;
+      let myAge = function() {
+        var dt = new Date();
+            age =  dt.getFullYear() - myBorn;
+        document.getElementById('age').innerHTML = age;
+      }
+
+      myAge();
+      console.log(age);
+    </script>
+    <script src="./assets/js/script_.js" charset="utf-8"></script>
+
+    </script>
+  </body>
+</html>
