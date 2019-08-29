@@ -167,10 +167,11 @@ a {
   display: flex;
   flex-direction: row;
   font-family: Montserrat, Arvo, serif;
-  /* justify-content: space-between; */
+  /* align-content: space-around;
+  justify-content: space-around; */
 }
 
-#education .class ul {
+#education .class ol {
   width: auto;
 }
 
