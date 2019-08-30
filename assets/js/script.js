@@ -7,6 +7,11 @@ about.addEventListener('click', function() {
 const myBorn = 2002;
 let myAge = () => {
   const dt = new Date();
+  if (dt.getMonth() < 1) {
+    return (dt.getFullYear() - 2002 - 1);
+  }else if (dt.getMonth() == 1 && dt.getDate() >= 27) {
+    return (dt.getFullYear() - 2002);
+  }
   return (dt.getFullYear() - 2002);
 }
 const age = document.getElementById('age');
