@@ -16,7 +16,10 @@ p {
   font-family: Montserrat, Arvo, serif;
   text-indent: 3vh;
   text-align: justify;
-  text-transform: capitalize;
+}
+
+p:first-letter{
+  text-transform: capitalize
 }
 
 html, body {
@@ -146,6 +149,7 @@ a {
 .title {
   font-size: 4vh;
   font-family: Montserrat, Arvo, serif;
+  text-transform: capitalize;
 }
 
 .right .content {
