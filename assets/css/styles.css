@@ -16,6 +16,7 @@ p {
   font-family: Montserrat, Arvo, serif;
   text-indent: 3vh;
   text-align: justify;
+  text-transform: capitalize;
 }
 
 html, body {
