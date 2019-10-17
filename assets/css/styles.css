@@ -8,6 +8,12 @@
   src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
 }
 
+@media print {
+    html, body {
+       display: none;  /* hide whole page */
+    }
+}
+
 * {
   font-family: Montserrat, Arvo, serif;
 }
